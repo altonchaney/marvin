@@ -14,13 +14,12 @@ export default class Home extends Component {
 
   handleIncrement = () => {
     /* Implement Increment function */
-    this.setState({ counter: this.state.counter+1 });
-    
+    this.setState({ counter: this.state.counter + 1 });
   }
 
   handleDecrement = () => {
     /* Implement Decrement function */
-    this.setState({ counter: this.state.counter-1 });
+    this.setState({ counter: this.state.counter - 1 });
   }
 
   handleSave = () => {
@@ -31,7 +30,6 @@ export default class Home extends Component {
 
   render() {
     const { counter, saved } = this.state;
-    console.log(this.state);
     return (
       <div className='Home'>
         <div className='Example'>
@@ -44,7 +42,7 @@ export default class Home extends Component {
         <hr />
         <p style={ { textDecoration: 'underline' } }>Saved Numbers</p>
         <ul>
-          { saved.map((number, idx) => { return (<li key={ idx }>{ number }</li>) }) }
+          { saved.map((number, idx) => <li key={idx}>{ number }</li>)}
         </ul>
       </div>
     );
